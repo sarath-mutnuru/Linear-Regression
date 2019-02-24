@@ -39,3 +39,18 @@ However we can include squared feature terms and feature interaction terms to br
 Here we perform Linear Regression using the direct variables and also using combination of given features and their squares and compare the performance on the data.
 
 The functions are all hand written in python and use no external library.
+
+**Analysis of the performance**
+
+If we run the code , we will observe that the MSE on the validation set using Linear Regression is 2.745 which is generally high
+but after we have included the second degree terms the MSE on the validation set has gone down to 0.25 which is a quite good improvement.
+
+The reason for this will become clear if we examine the data.
+
+The below is the scatter plot of the data and the varaible we have estimated using linear and using squared terms.
+The data has a dent in it at 4(we have only one feature) so the best line the linear regression predicts has considerable error but after we used squared terms also it tried to fit a second degree curve which minimized tge error.
+
+![alt text](https://github.com/sarath-mutnuru/Linear-Regression/blob/master/figure.png)
+
+This analysis proves the imortance of data examination which is the crucial part of Machine Learning task.
+
